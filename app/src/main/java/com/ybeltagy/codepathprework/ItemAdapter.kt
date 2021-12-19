@@ -91,12 +91,10 @@ class ItemAdapter(private val listOfItems : List<String>, val clickListener: Ite
         init {
             deleteButton.setOnClickListener {
                 clickListener.onItemDeleteRequest(adapterPosition)
-                true
             }
 
             editButton.setOnClickListener {
                 clickListener.onItemEditRequest(adapterPosition)
-                true
             }
 
         }

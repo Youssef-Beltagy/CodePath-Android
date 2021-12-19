@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.activity.result.ActivityResult
-import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -38,27 +37,25 @@ class MainActivity : AppCompatActivity() {
             }
 
             val editItemActivityLauncher = registerForActivityResult(
-                ActivityResultContracts.StartActivityForResult(),
-                ActivityResultCallback { result : ActivityResult? ->
-                    if(result?.resultCode == RESULT_OK){
-                        val bundle = result?.data?.extras
-                        val id = bundle?.getInt("id")
-                        val item = bundle?.getString("value")
+                ActivityResultContracts.StartActivityForResult()
+            ) { result: ActivityResult? ->
+                if (result?.resultCode == RESULT_OK) {
+                    val bundle = result.data?.extras
+                    val id = bundle?.getInt("id")
+                    val item = bundle?.getString("value")
 
-                        with(receiver = adapter) {
-                            if(id != null && item != null && id >= 0 && id < list.size) {
-                                list[id] = item
-                            }
-
-                            notifyDataSetChanged()
+                    with(receiver = adapter) {
+                        if (id != null && item != null && id >= 0 && id < list.size) {
+                            list[id] = item
                         }
 
-                        saveItems()
+                        notifyDataSetChanged()
                     }
 
+                    saveItems()
                 }
 
-            )
+            }
 
             override fun onItemEditRequest(position: Int) {
                 val intent = Intent(this@MainActivity, EditItemActivity::class.java)
@@ -76,13 +73,18 @@ class MainActivity : AppCompatActivity() {
         // Initialize the add button
         val addEditText = findViewById<EditText>(R.id.add_edittext)
         findViewById<Button>(R.id.add_button).setOnClickListener {
-            list.add(addEditText.text.toString().trim())
 
-            adapter.notifyItemInserted(list.size - 1)
+            val string = addEditText.text.toString().trim()
 
-            saveItems()
+            if(!string.isEmpty()){
+                list.add(string)
 
-            addEditText.setText("")
+                adapter.notifyItemInserted(list.size - 1)
+
+                saveItems()
+
+                addEditText.setText("")
+            }
         }
     }
 

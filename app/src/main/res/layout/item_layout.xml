@@ -12,7 +12,7 @@
         android:layout_marginStart="@dimen/default_margin"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="@dimen/default_margin"
-        android:text="TextView"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="@+id/edit_button"
         app:layout_constraintEnd_toStartOf="@+id/edit_button"
         app:layout_constraintHorizontal_bias="1.0"
@@ -25,7 +25,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
         android:layout_marginEnd="@dimen/default_margin"
-        android:text="done"
+        android:backgroundTint="#DFD31818"
+        android:minWidth="55dip"
+        android:padding="0dp"
+        android:text="@string/done"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,7 +37,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/default_margin"
-        android:text="edit"
+        android:backgroundTint="#E62643D6"
+        android:minWidth="55dip"
+        android:padding="0dp"
+        android:text="@string/edit"
         app:layout_constraintBottom_toBottomOf="@+id/delete_button"
         app:layout_constraintEnd_toStartOf="@+id/delete_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>
