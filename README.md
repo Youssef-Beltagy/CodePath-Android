@@ -24,24 +24,23 @@ The following **additional** features are implemented:
 * [x] Edit and delete buttons instead of short and long clicks (more intuitive) 
 * [x] Red done button, Green add button, Blue edit button
 * [x] Small done and edit buttons
-* [ ] task due date
-* [ ] order tasks by most recent due date
+* [ ] TODO: SQlite DB instead of a text file
+* [ ] TODO: add task due date
+* [ ] TODO: order tasks by most recent due date
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://raw.githubusercontent.com/Youssef-Beltagy/CodePath-Android/main/demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-The video tutorial made everything easy.
-But when I was adding the editing functionality,
-I realized the guide is outdated and `startActivityForResult` is deprecated.
-It was challenging to find and learn how to use the new method.
+The video tutorial made everything easy. But when I was adding the editing functionality, I realized `startActivityForResult` is deprecated and the guide is outdated.
 
+It was challenging to find and learn how to use the new method. That probably took more time than the rest of the whole project.
 
 ## License
 
