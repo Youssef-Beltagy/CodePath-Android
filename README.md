@@ -27,6 +27,7 @@ The following **additional** features are implemented:
 * [ ] TODO: SQlite DB instead of a text file
 * [ ] TODO: add task due date
 * [ ] TODO: order tasks by most recent due date
+* [ ] TODO: delete by sliding instead of button + Edit by short click
 
 ## Video Walkthrough
 
