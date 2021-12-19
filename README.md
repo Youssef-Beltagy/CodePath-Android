@@ -45,7 +45,7 @@ It was challenging to find and learn how to use the new method. That probably to
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2021 Youssef Beltagy
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
